@@ -6,7 +6,6 @@ class CampoTexto extends StatefulWidget {
 }
 
 class _CampoTextoState extends State<CampoTexto> {
-
 //Controlador do que e digitado no editText
   TextEditingController _textEditingController = TextEditingController();
 
@@ -45,7 +44,7 @@ class _CampoTextoState extends State<CampoTexto> {
                 },*/
               onSubmitted: (String texto) =>
                   {print("Valor Confirmado: " + texto)},
-                  controller: _textEditingController,
+              controller: _textEditingController,
             ),
           ),
           RaisedButton(
@@ -54,7 +53,9 @@ class _CampoTextoState extends State<CampoTexto> {
               style: TextStyle(color: Colors.white),
             ),
             color: Colors.red,
-            onPressed: () {},
+            onPressed: () {
+              print("Valor digitado: " + _textEditingController.text);
+            },
           ),
         ],
       ),
