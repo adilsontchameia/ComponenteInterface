@@ -6,6 +6,10 @@ class CampoTexto extends StatefulWidget {
 }
 
 class _CampoTextoState extends State<CampoTexto> {
+
+//Controlador do que e digitado no editText
+  TextEditingController _textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,9 +37,24 @@ class _CampoTextoState extends State<CampoTexto> {
                 fontSize: 18, 
                 color: Colors.blue
                 ),*/
-              //Ocultar
-              obscureText: true,
+              //Ocultar as palavras(usadas em password)
+              //obscureText: true,
+              //Pegar o que foi digitado pelo usuario
+              /*onChanged: (String texto) => {
+                print("Valor Digitado: " + texto)
+                },*/
+              onSubmitted: (String texto) =>
+                  {print("Valor Confirmado: " + texto)},
+                  controller: _textEditingController,
             ),
+          ),
+          RaisedButton(
+            child: Text(
+              "Salvar",
+              style: TextStyle(color: Colors.white),
+            ),
+            color: Colors.red,
+            onPressed: () {},
           ),
         ],
       ),
