@@ -17,9 +17,25 @@ class _CampoTextoState extends State<CampoTexto> {
         children: [
           Padding(
             padding: EdgeInsets.all(32),
-          child: TextField(
-            
-          ),
+            child: TextField(
+              cursorColor: Colors.red,
+              //Tipo de teclado a ser usado(text,email,number)
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Digite um valor",
+              ),
+              //Habilitar ou desabilitar campos
+              //enabled: true,
+              //numero maximo de caractere
+              //maxLength: 2,
+              //maxLengthEnforced: false,
+              /*style: TextStyle(
+                fontSize: 18, 
+                color: Colors.blue
+                ),*/
+              //Ocultar
+              obscureText: true,
+            ),
           ),
         ],
       ),
