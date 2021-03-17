@@ -9,9 +9,24 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-      title: Text("Tela Secundaria"),
-    ),  
+      appBar: AppBar(
+        title: Text("Tela Secundaria"),
+        backgroundColor: Colors.green,
+      ),
+      body: Container(
+        padding: EdgeInsets.all(32),
+        child: Column(
+          children: [
+            Text(
+              "Secunda Tela",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.green),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
