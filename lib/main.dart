@@ -1,4 +1,3 @@
-import 'package:alcool_gasolina/EntradaCheckBox.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,6 +23,10 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           children: [
             RaisedButton(
               child: Text("Ir Para Segunda Tela"),
+              padding: EdgeInsets.all(20),
+              onPressed: () {
+              
+              },
             ),
           ],
         ),
