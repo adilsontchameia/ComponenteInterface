@@ -7,7 +7,8 @@ class EntradaCheckBox extends StatefulWidget {
 
 class _EntradaCheckBoxState extends State<EntradaCheckBox> {
   //Mudar estado do checkbox
-  bool _estaSelecionado = false;
+  bool _comidaAngola = false;
+  bool _comidaNamibia = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,15 +24,48 @@ class _EntradaCheckBoxState extends State<EntradaCheckBox> {
                 title: Text("Comida Angolana"),
                 subtitle: Text("Gastronomia Saborosa"),
                 activeColor: Colors.red,
-                //selected: true, 
+                //selected: true,
                 //Icone
                 secondary: Icon(Icons.food_bank),
-                value: _estaSelecionado,
+                value: _comidaAngola,
                 onChanged: (bool valor) {
                   setState(() {
-                    _estaSelecionado = valor;
+                    _comidaAngola = valor;
                   });
-                })
+                }),
+            CheckboxListTile(
+                title: Text("Comida Namibiana"),
+                subtitle: Text("Gastronomia Selvagem"),
+                activeColor: Colors.red,
+                //selected: true,
+                //Icone
+                secondary: Icon(Icons.no_food),
+                value: _comidaNamibia,
+                onChanged: (bool valor) {
+                  setState(() {
+                    _comidaNamibia = valor;
+                  });
+                }),
+            Container(
+              padding: EdgeInsets.all(50),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  RaisedButton(
+                      child: Text(
+                        "Salvar",
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      color: Colors.orange,
+                      onPressed: () {
+                        print("Comida Angolana: " +
+                            _comidaAngola.toString() +
+                            ", Comida Namibiana: " +
+                            _comidaNamibia.toString());
+                      })
+                ],
+              ),
+            ),
 
             /*
             Text("Comida Angolana"),
