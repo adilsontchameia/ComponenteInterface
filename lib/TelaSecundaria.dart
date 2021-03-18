@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 class TelaSecundaria extends StatefulWidget {
   String valor;
   //Construtor - Recebe parametro
-  TelaSecundaria(this.valor);
+  //Paramentro Opcional -  TelaSecundaria({this.valor});
+  TelaSecundaria({this.valor});
 
   @override
   _TelaSecundariaState createState() => _TelaSecundariaState();
 }
 
 class _TelaSecundariaState extends State<TelaSecundaria> {
-  //
+  
+  //Acessar o valor
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,8 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
         child: Column(
           children: [
             Text(
-              "Secunda Tela",
+              //Recuperar
+              "Segunda Tela. Valor passado: ${widget.valor}",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,

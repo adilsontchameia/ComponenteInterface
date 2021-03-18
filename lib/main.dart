@@ -35,8 +35,10 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                     context,
                     //Rota
                     MaterialPageRoute(
-                      //Passando Valor
-                        builder: (context) => TelaSecundaria("Adilson")));
+                        //Passando Valor
+                        builder: (context) => TelaSecundaria(
+                              valor: "Adilson",
+                            )));
               },
             ),
           ],
