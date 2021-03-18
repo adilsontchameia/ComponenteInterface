@@ -11,7 +11,6 @@ class TelaSecundaria extends StatefulWidget {
 }
 
 class _TelaSecundariaState extends State<TelaSecundaria> {
-  
   //Acessar o valor
 
   @override
@@ -27,6 +26,7 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
           children: [
             Text(
               //Recuperar
+              //Tenho que recuperar com o atributo widget.
               "Segunda Tela. Valor passado: ${widget.valor}",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
