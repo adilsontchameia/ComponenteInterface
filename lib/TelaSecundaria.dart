@@ -28,12 +28,18 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
               //Recuperar
               //Tenho que recuperar com o atributo widget.
               //"Segunda Tela. Valor passado: ${widget.valor}",
-              "Segunda Tela. Valor passado:",
+              "Segunda Tela",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                   color: Colors.green),
-            )
+            ),
+            RaisedButton(
+                child: Text("Ir Para Primeira Tela"),
+                padding: EdgeInsets.all(20),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/");
+                }),
           ],
         ),
       ),

@@ -2,13 +2,16 @@ import 'package:alcool_gasolina/TelaSecundaria.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    //RotaInicial
-    initialRoute: "/",
-     home: TelaPrincipal(),
-     ),
-     );
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      //RotaInicial
+      initialRoute: "/",
+      //Podemos criar varias cotas
+      routes: {"/secundaria": (context) => TelaSecundaria()},
+      home: TelaPrincipal(),
+    ),
+  );
 }
 
 class TelaPrincipal extends StatefulWidget {
@@ -29,11 +32,11 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         child: Column(
           children: [
             RaisedButton(
-              child: Text("Ir Para Segunda Tela"),
-              padding: EdgeInsets.all(20),
-              onPressed: () {
-
-            ),
+                child: Text("Ir Para Segunda Tela"),
+                padding: EdgeInsets.all(20),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/secundaria");
+                }),
           ],
         ),
       ),
