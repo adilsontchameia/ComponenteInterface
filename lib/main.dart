@@ -2,7 +2,13 @@ import 'package:alcool_gasolina/TelaSecundaria.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: TelaPrincipal()));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    //RotaInicial
+    initialRoute: "/",
+     home: TelaPrincipal(),
+     ),
+     );
 }
 
 class TelaPrincipal extends StatefulWidget {
@@ -26,20 +32,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               child: Text("Ir Para Segunda Tela"),
               padding: EdgeInsets.all(20),
               onPressed: () {
-                //Abrir outra tela
-                //Objeto Navigator
-                //PUSH - ABRE TELA DEFINIDA
-                //POP -  FECHA TELA ATUAL E ABRE UMA NOVA.
-                Navigator.push(
-                    //
-                    context,
-                    //Rota
-                    MaterialPageRoute(
-                        //Passando Valor
-                        builder: (context) => TelaSecundaria(
-                              valor: "Adilson",
-                            )));
-              },
+
             ),
           ],
         ),

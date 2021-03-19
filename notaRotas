@@ -1,0 +1,14 @@
+                //Abrir outra tela
+                //Objeto Navigator
+                //PUSH - ABRE TELA DEFINIDA
+                //POP -  FECHA TELA ATUAL E ABRE UMA NOVA.
+                Navigator.push(
+                    //
+                    context,
+                    //Rota
+                    MaterialPageRoute(
+                        //Passando Valor
+                        builder: (context) => TelaSecundaria(
+                              valor: "Adilson",
+                            )));
+              },

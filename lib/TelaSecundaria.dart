@@ -27,7 +27,8 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
             Text(
               //Recuperar
               //Tenho que recuperar com o atributo widget.
-              "Segunda Tela. Valor passado: ${widget.valor}",
+              //"Segunda Tela. Valor passado: ${widget.valor}",
+              "Segunda Tela. Valor passado:",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
