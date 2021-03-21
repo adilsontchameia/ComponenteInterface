@@ -45,13 +45,14 @@ class _ListaEventoState extends State<ListaEvento> {
                           title: Text("Deseja vizualizar: " +
                               _itens[indice]["titulo"] +
                               " ?"),
-                              titlePadding: EdgeInsets.all(30),
-                              titleTextStyle: TextStyle(
-                                fontSize: 20,
-                                color: Colors.blue
-                              ),
+                          titlePadding: EdgeInsets.all(30),
+                          titleTextStyle: TextStyle(
+                              fontSize: 20, color: Colors.yellowAccent),
                           content: Text(_itens[indice]["descricao"]),
                           contentPadding: EdgeInsets.all(10),
+                          backgroundColor: Colors.blue,
+                          contentTextStyle: TextStyle(color: Colors.white),
+                          //Definindo Widgets
                         );
                       });
                 },
