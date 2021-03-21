@@ -50,9 +50,21 @@ class _ListaEventoState extends State<ListaEvento> {
                               fontSize: 20, color: Colors.yellowAccent),
                           content: Text(_itens[indice]["descricao"]),
                           contentPadding: EdgeInsets.all(10),
-                          backgroundColor: Colors.blue,
+                          backgroundColor: Colors.orange,
                           contentTextStyle: TextStyle(color: Colors.white),
-                          //Definindo Widgets
+                          //Definindo Widgets no AlertDialog
+                          actions: [
+                            ElevatedButton(
+                                onPressed: () {
+                                  print("Selecionado Sim");
+                                },
+                                child: Text("Sim")),
+                            ElevatedButton(
+                                onPressed: () {
+                                  print("Selecionado Nao");
+                                },
+                                child: Text("Nao"))
+                          ],
                         );
                       });
                 },
