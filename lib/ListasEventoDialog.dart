@@ -36,11 +36,11 @@ class _ListaEventoState extends State<ListaEvento> {
 
               return ListTile(
                 onTap: () {
-                  print("On Tap");
+                  print("On Tap ${indice}");
                 },
-                onLongPress: () {
+                /*onLongPress: () {
                   print("On LongPress");
-                },
+                },*/
                 title: Text(_itens[indice]["titulo"]),
                 subtitle: Text(_itens[indice]["descricao"]),
               );
