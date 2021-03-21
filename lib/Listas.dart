@@ -38,7 +38,12 @@ class _ListasState extends State<Listas> {
             itemCount: _itens.length,
             //Indice -
             itemBuilder: (context, indice) {
-              print("Item : ${_itens[indice].toString()}");
+
+              //Colocando os MAPS dentro de itens, de acordo 
+              //com os indices
+              Map<String, dynamic> item = _itens[indice];
+
+              print("Item : ${item["titulo"]}");
               return ListTile(
                 //Podemos usar outros widgets
                 title: Text(indice.toString()),
