@@ -55,15 +55,21 @@ class _ListaEventoState extends State<ListaEvento> {
                           //Definindo Widgets no AlertDialog
                           actions: [
                             ElevatedButton(
-                                onPressed: () {
-                                  print("Selecionado Sim");
-                                },
-                                child: Text("Sim")),
+                              onPressed: () {
+                                print("Selecionado Sim");
+                                //Fechando a dialogApos Clicar.
+                                Navigator.pop(context);
+                              },
+                              child: Text("Sim"),
+                            ),
                             ElevatedButton(
-                                onPressed: () {
-                                  print("Selecionado Nao");
-                                },
-                                child: Text("Nao"))
+                              onPressed: () {
+                                print("Selecionado Nao");
+                                //Fechando a dialogApos Clicar.
+                                Navigator.pop(context);
+                              },
+                              child: Text("Nao"),
+                            )
                           ],
                         );
                       });
