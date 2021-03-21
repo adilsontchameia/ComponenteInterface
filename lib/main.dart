@@ -1,4 +1,5 @@
-import 'package:alcool_gasolina/Listas.dart';
+import 'package:alcool_gasolina/ListasDinamicas.dart';
+import 'package:alcool_gasolina/ListasEventoDialog.dart';
 import 'package:alcool_gasolina/TelaSecundaria.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ void main() {
       //RotaInicial
       initialRoute: "/",
       //Podemos criar varias cotas
-      routes: {"/telaLista": (context) => Listas()},
+      routes: {"/telaLista": (context) => ListasEvento()},
       home: TelaPrincipal(),
     ),
   );
