@@ -42,8 +42,16 @@ class _ListaEventoState extends State<ListaEvento> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text("Titulo"),
-                          content: Text("Conteudo"),
+                          title: Text("Deseja vizualizar: " +
+                              _itens[indice]["titulo"] +
+                              " ?"),
+                              titlePadding: EdgeInsets.all(30),
+                              titleTextStyle: TextStyle(
+                                fontSize: 20,
+                                color: Colors.blue
+                              ),
+                          content: Text(_itens[indice]["descricao"]),
+                          contentPadding: EdgeInsets.all(10),
                         );
                       });
                 },
