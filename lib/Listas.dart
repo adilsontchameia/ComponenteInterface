@@ -11,6 +11,8 @@ class _ListasState extends State<Listas> {
 
   //Metodo para carregarItes
   void _carregarItens() {
+    //Antes de carregar os itens vou zerar
+    List _itens = [];
     //Estrutura for para montar a listagem
     for (int i = 0; i <= 10; i++) {
       //Para cada execucao do for, vou criar um map
@@ -46,7 +48,7 @@ class _ListasState extends State<Listas> {
 
               return ListTile(
                 //Podemos usar outros widgets
-                title: Text( _itens[indice]["titulo"] ),
+                title: Text(_itens[indice]["titulo"]),
                 subtitle: Text(_itens[indice]["descricao"]),
               );
             }),
