@@ -36,7 +36,16 @@ class _ListaEventoState extends State<ListaEvento> {
 
               return ListTile(
                 onTap: () {
-                  print("On Tap ${indice}");
+                  //print("On Tap ${indice}");
+                  //Usar AlertDialog
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text("Titulo"),
+                          content: Text("Conteudo"),
+                        );
+                      });
                 },
                 /*onLongPress: () {
                   print("On LongPress");
