@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ListaEvento extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _ListaEventoState createState() => _ListaEventoState();
+  _HomeState createState() => _HomeState();
 }
 
-class _ListaEventoState extends State<ListaEvento> {
+class _HomeState extends State<Home> {
   List _itens = [];
 
   void _carregarItens() {
@@ -24,7 +24,7 @@ class _ListaEventoState extends State<ListaEvento> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Lista  Com Eventos de Click"),
+        title: Text("Lista"),
       ),
       body: Container(
         padding: EdgeInsets.all(20),
