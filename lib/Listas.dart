@@ -13,12 +13,19 @@ class _ListasState extends State<Listas> {
   void _carregarItens() {
     //Estrutura for para montar a listagem
     for (int i = 0; i <= 10; i++) {
+      //Para cada execucao do for, vou criar um map
       Map<String, dynamic> item = Map();
+      item["titulo"] = "Titulo ${i} Loren ipsum dolor sit amet";
+      item["descricao"] = "Titulo ${i} Loren ipsum dolor sit amet";
+      _itens.add(item);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    //Carregar os itens
+    _carregarItens();
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Listas no Flutter"),
@@ -28,10 +35,10 @@ class _ListasState extends State<Listas> {
         //Criar Lista
         child: ListView.builder(
             //Quantidade de itens
-            itemCount: 5,
+            itemCount: _itens.length,
             //Indice -
             itemBuilder: (context, indice) {
-              print("Item : ${indice}");
+              print("Item : ${_itens[indice].toString()}");
               return ListTile(
                 //Podemos usar outros widgets
                 title: Text(indice.toString()),
