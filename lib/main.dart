@@ -1,3 +1,4 @@
+import 'package:alcool_gasolina/Listas.dart';
 import 'package:alcool_gasolina/TelaSecundaria.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ void main() {
       //RotaInicial
       initialRoute: "/",
       //Podemos criar varias cotas
-      routes: {"/secundaria": (context) => TelaSecundaria()},
+      routes: {"/telaLista": (context) => Listas()},
       home: TelaPrincipal(),
     ),
   );
@@ -35,7 +36,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                 child: Text("Ir Para Segunda Tela"),
                 padding: EdgeInsets.all(20),
                 onPressed: () {
-                  Navigator.pushNamed(context, "/secundaria");
+                  Navigator.pushNamed(context, "/telaLista");
                 }),
           ],
         ),
