@@ -6,6 +6,17 @@ class Listas extends StatefulWidget {
 }
 
 class _ListasState extends State<Listas> {
+  //Lista Estatica
+  List _itens = [];
+
+  //Metodo para carregarItes
+  void _carregarItens() {
+    //Estrutura for para montar a listagem
+    for (int i = 0; i <= 10; i++) {
+      Map<String, dynamic> item = Map();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +35,7 @@ class _ListasState extends State<Listas> {
               return ListTile(
                 //Podemos usar outros widgets
                 title: Text(indice.toString()),
+                subtitle: Text("Subtitulo"),
               );
             }),
       ),
